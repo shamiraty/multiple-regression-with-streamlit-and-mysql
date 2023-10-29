@@ -18,32 +18,18 @@ formatted_date = current_datetime.strftime('%Y-%m-%d')
 formatted_day = current_datetime.strftime('%A')
  
 
-  
-
 st.header("⏱ MACHINE LEARNING WORKFLOW | MYSQL  ")
 st.success("MULTIPLE REGRESSION ANALYSIS DASHBOARD")
-
-
-
-
 
 
 # load CSS Style
 with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
- 
-
-
-
-
- 
-
-
-
- #read data from mysql
-result = view_all_data()
-df = pd.DataFrame(result,columns=["id","year","month","interest_rate","unemployment_rate","index_price"])
+#read data from mysql
+#result = view_all_data()
+#df = pd.DataFrame(result,columns=["id","year","month","interest_rate","unemployment_rate","index_price"])
+df=pd.read_csv("my_dataframe.csv")
 
 #logo
 st.sidebar.image("images/logo2.png",caption="BUSINESS ANALYTICS V: 01/2023")
