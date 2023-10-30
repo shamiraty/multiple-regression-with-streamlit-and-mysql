@@ -12,17 +12,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 #navicon and header
 st.set_page_config(page_title="Dashboard", page_icon="📈", layout="wide")  
 
-
-# Detect and use a custom Streamlit configuration folder
-custom_config_folder = "streamlit"
-if os.path.exists(custom_config_folder) and os.path.isdir(custom_config_folder):
-    st.set_option('server.folderWatch.blacklist', [custom_config_folder])
-    st.set_option('global.useContainer', False)
-else:
-    st.warning("Custom configuration folder not found. Using default configuration.")
-
-
-
 #current date
 from datetime import datetime
 current_datetime = datetime.now()
