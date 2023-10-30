@@ -6,7 +6,7 @@ import numpy as np
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 #from query import *
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 #navicon and header
 st.set_page_config(page_title="Dashboard", page_icon="📈", layout="wide")  
